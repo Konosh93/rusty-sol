@@ -1,4 +1,4 @@
-//! A program demonstrating account ownership
+//! A program demonstrating tests
 pub mod processor;
 
 #[cfg(not(feature = "no-entrypoint"))]

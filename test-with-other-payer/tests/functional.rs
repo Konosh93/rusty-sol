@@ -8,7 +8,7 @@ use {
     },
     solana_program_test::*,
     solana_sdk::{signature::{Signer, Keypair}, transaction::Transaction, account::Account as SDKAccount},
-    account_owner::processor
+    another_payer::processor
 };
 
 use bumpalo::{Bump};
@@ -32,7 +32,7 @@ async fn test_escrow() {
     );
     let program_id = Pubkey::new_unique();
     let mut pc = ProgramTest::new(
-        "program_testing_signer",
+        "another-payer",
         program_id,
         processor!(Processor::process),
     );
